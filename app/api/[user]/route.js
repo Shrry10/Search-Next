@@ -29,11 +29,12 @@
 
 import { nameList } from "../List";
 
-export async function GET({ params }) {
+export async function GET(req) {
     console.log("ok");
+    let entry = req.url.split('/').pop();
     const name = [];
     nameList.map((n) => {
-        if(n.username.toLowerCase().includes(params.user.toLowerCase())) {
+        if(n.username.toLowerCase().includes(entry.toLowerCase())) {
             name.push(n);
         }
     })
