@@ -27,6 +27,14 @@
 //   }
 // }
 
+// import { nameList } from "./List";
+
+// export async function GET({ params }) {
+//     console.log("ok");
+//     return Response.json(nameList);
+// }
+
+
 import { nameList } from "../List";
 
 export async function GET(req) {
@@ -40,3 +48,16 @@ export async function GET(req) {
     })
     return Response.json(name);
 }
+
+// import { nameList } from "../List";
+
+// export async function GET({params}) {
+//     console.log("ok");
+//     const name = [];
+//     nameList.map((n) => {
+//         if(n.username.toLowerCase().includes(params.user.toLowerCase())) {
+//             name.push(n);
+//         }
+//     })
+//     return Response.json(name);
+// }

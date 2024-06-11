@@ -10,8 +10,7 @@ function App() {
 
   const handleSubmit = async (entry) => {
     try {
-      console.log("ok");
-      const response = await fetch(`http://localhost:3000/api/${entry}`);
+      const response = await fetch(`http://localhost:3000/${entry}`);
       const data = await response.json();
 
       setUsers(data);
